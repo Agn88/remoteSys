@@ -28,6 +28,7 @@ public class UserMachineService {
 	}
 	
 
+	//Consulta quais as Máquinas pertecentes ao ID de usuário fornecido
 	public List<UserMachine> findById(Long id) {
 		
 		ArrayList<UserMachine> list = new ArrayList();
