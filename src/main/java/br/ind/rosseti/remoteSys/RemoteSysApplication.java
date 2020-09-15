@@ -13,8 +13,10 @@ public class RemoteSysApplication {
 		SpringApplication.run(RemoteSysApplication.class, args);
 	}
 
+	/*
 	@GetMapping("/")
 	public String home() {
 		return "Home Page";
 	}
+	*/
 }

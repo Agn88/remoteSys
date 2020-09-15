@@ -7,5 +7,5 @@ import br.ind.rosseti.remoteSys.entities.User;
 
 
 public interface UserRepository extends JpaRepository<User, Long>{
-
+	User findByUsername(String username); // VERIFICAR
 }
