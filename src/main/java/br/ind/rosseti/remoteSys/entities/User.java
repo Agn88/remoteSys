@@ -41,8 +41,6 @@ public class User implements Serializable{
 		this.enabled = enabled;
 	}
 	
-	
-
 	public String getUsername() {
 		return username;
 	}
