@@ -1,33 +1,27 @@
-package br.ind.rosseti.remoteSys.config;
-
+package br.ind.rosseti.remoteSys.services;
 
 import java.time.Instant;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
-import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Service;
+
+import com.sun.el.parser.ParseException;
 
 import br.ind.rosseti.remoteSys.entities.Authoritie;
 import br.ind.rosseti.remoteSys.entities.DetailUser;
 import br.ind.rosseti.remoteSys.entities.Machine;
-import br.ind.rosseti.remoteSys.entities.MachineDetail;
 import br.ind.rosseti.remoteSys.entities.User;
 import br.ind.rosseti.remoteSys.entities.UserMachine;
 import br.ind.rosseti.remoteSys.repositories.AuthoritieRepository;
+import br.ind.rosseti.remoteSys.repositories.DetailUserRepository;
 import br.ind.rosseti.remoteSys.repositories.MachineDetailRepository;
 import br.ind.rosseti.remoteSys.repositories.MachineRepository;
 import br.ind.rosseti.remoteSys.repositories.UserLoginRepository;
 import br.ind.rosseti.remoteSys.repositories.UserMachineRepository;
-import br.ind.rosseti.remoteSys.repositories.DetailUserRepository;
 
-
-@Configuration
-@Profile("test")
-@Order(value=1)
-public class TestConfig implements CommandLineRunner{
+@Service
+public class DBService {
 
 	@Autowired
 	private DetailUserRepository userRepository;
@@ -47,8 +41,7 @@ public class TestConfig implements CommandLineRunner{
 	@Autowired
 	private UserLoginRepository userLoginRepository;
 	
-	@Override
-	public void run(String... args) throws Exception {
+	public void instantiateTestDatabase() throws ParseException {
 		
 		User login1 = new User("agnaldo", "$2y$12$RjGyK/e7j/A/19gUWlR8fOGF5cN6txEjas09Ft2zGeyf1b2jt8i96", true);
 		userLoginRepository.saveAll(Arrays.asList(login1));
@@ -124,6 +117,6 @@ public class TestConfig implements CommandLineRunner{
 		System.out.println("-----------------------------------");
 		System.out.println("Profile Order 1: Test! Executed is sucess.");
 		System.out.println("-----------------------------------");
-		
 	}
+	
 }

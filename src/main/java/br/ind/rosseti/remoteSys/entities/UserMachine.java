@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import br.ind.rosseti.remoteSys.entities.pk.UserMachinePK;
 
 @Entity
-@Table(name = "tb_user_machine")
+@Table(name = "user_machine")
 public class UserMachine implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -21,7 +21,7 @@ public class UserMachine implements Serializable{
 	
 	public UserMachine() {}
 
-	public UserMachine(Machine machine, User user) {
+	public UserMachine(Machine machine, DetailUser user) {
 		super();
 		id.setMachine(machine);
 		id.setUser(user);
@@ -37,11 +37,11 @@ public class UserMachine implements Serializable{
 	}
 	
 	
-	public User getUser() {
+	public DetailUser getUser() {
 		return id.getUser();
 	}
 	
-	public void setUser(User user) {
+	public void setUser(DetailUser user) {
 		id.setUser(user);
 	}
 

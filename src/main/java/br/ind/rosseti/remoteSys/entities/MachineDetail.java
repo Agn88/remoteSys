@@ -14,14 +14,14 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
-@Table(name = "tb_machine_detail")
+@Table(name = "machine_detail")
 public class MachineDetail implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	Long id;
+	private Long id;
 
 	@ManyToOne
 	@JoinColumn(name = "machine_id")
@@ -30,29 +30,28 @@ public class MachineDetail implements Serializable{
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
 	private Instant dateContents;
 	
-	String var01;
-	String var02;
-	String var03;
-	String var04;
-	String var05;
-	String var06;
-	String var07;
-	String var08;
-	String var09;
-	String var10;
-	String var11;
-	String var12;
-	String var13;
+	private Float var01;
+	private Float var02;
+	private Float var03;
+	private Float var04;
+	private Float var05;
+	private Float var06;
+	private Float var07;
+	private Float var08;
+	private Float var09;
+	private Float var10;
+	private Float var11;
+	private Float var12;
+	private Float var13;
 	
 	
 	public MachineDetail() {
 		
 	}
 
-
-	public MachineDetail(Long id, Machine machine, Instant dateContents, String var01, String var02, String var03,
-			String var04, String var05, String var06, String var07, String var08, String var09, String var10,
-			String var11, String var12, String var13) {
+	public MachineDetail(Long id, Machine machine, Instant dateContents, Float var01, Float var02, Float var03,
+			Float var04, Float var05, Float var06, Float var07, Float var08, Float var09, Float var10, Float var11,
+			Float var12, Float var13) {
 		super();
 		this.id = id;
 		this.machine = machine;
@@ -73,165 +72,136 @@ public class MachineDetail implements Serializable{
 	}
 
 
+
+
+
 	public Long getId() {
 		return id;
 	}
-
 
 	public void setId(Long id) {
 		this.id = id;
 	}
 
-
-	public Machine getPicador() {
+	public Machine getMachine() {
 		return machine;
 	}
 
-
-	public void setPicador(Machine machine) {
+	public void setMachine(Machine machine) {
 		this.machine = machine;
 	}
-
 
 	public Instant getDateContents() {
 		return dateContents;
 	}
 
-
 	public void setDateContents(Instant dateContents) {
 		this.dateContents = dateContents;
 	}
 
-
-	public String getVar01() {
+	public Float getVar01() {
 		return var01;
 	}
 
-
-	public void setVar01(String var01) {
+	public void setVar01(Float var01) {
 		this.var01 = var01;
 	}
 
-
-	public String getVar02() {
+	public Float getVar02() {
 		return var02;
 	}
 
-
-	public void setVar02(String var02) {
+	public void setVar02(Float var02) {
 		this.var02 = var02;
 	}
 
-
-	public String getVar03() {
+	public Float getVar03() {
 		return var03;
 	}
 
-
-	public void setVar03(String var03) {
+	public void setVar03(Float var03) {
 		this.var03 = var03;
 	}
 
-
-	public String getVar04() {
+	public Float getVar04() {
 		return var04;
 	}
 
-
-	public void setVar04(String var04) {
+	public void setVar04(Float var04) {
 		this.var04 = var04;
 	}
 
-
-	public String getVar05() {
+	public Float getVar05() {
 		return var05;
 	}
 
-
-	public void setVar05(String var05) {
+	public void setVar05(Float var05) {
 		this.var05 = var05;
 	}
 
-
-	public String getVar06() {
+	public Float getVar06() {
 		return var06;
 	}
 
-
-	public void setVar06(String var06) {
+	public void setVar06(Float var06) {
 		this.var06 = var06;
 	}
 
-
-	public String getVar07() {
+	public Float getVar07() {
 		return var07;
 	}
 
-
-	public void setVar07(String var07) {
+	public void setVar07(Float var07) {
 		this.var07 = var07;
 	}
 
-
-	public String getVar08() {
+	public Float getVar08() {
 		return var08;
 	}
 
-
-	public void setVar08(String var08) {
+	public void setVar08(Float var08) {
 		this.var08 = var08;
 	}
 
-
-	public String getVar09() {
+	public Float getVar09() {
 		return var09;
 	}
 
-
-	public void setVar09(String var09) {
+	public void setVar09(Float var09) {
 		this.var09 = var09;
 	}
 
-
-	public String getVar10() {
+	public Float getVar10() {
 		return var10;
 	}
 
-
-	public void setVar10(String var10) {
+	public void setVar10(Float var10) {
 		this.var10 = var10;
 	}
 
-
-	public String getVar11() {
+	public Float getVar11() {
 		return var11;
 	}
 
-
-	public void setVar11(String var11) {
+	public void setVar11(Float var11) {
 		this.var11 = var11;
 	}
 
-
-	public String getVar12() {
+	public Float getVar12() {
 		return var12;
 	}
 
-
-	public void setVar12(String var12) {
+	public void setVar12(Float var12) {
 		this.var12 = var12;
 	}
 
-
-	public String getVar13() {
+	public Float getVar13() {
 		return var13;
 	}
 
-
-	public void setVar13(String var13) {
+	public void setVar13(Float var13) {
 		this.var13 = var13;
 	}
-
 
 	@Override
 	public int hashCode() {

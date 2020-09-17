@@ -4,8 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import br.ind.rosseti.remoteSys.entities.User;
 
+public interface UserLoginRepository extends JpaRepository<User, Long>{
 
-
-public interface UserRepository extends JpaRepository<User, Long>{
-	User findByUsername(String username); // VERIFICAR
 }

@@ -8,7 +8,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import br.ind.rosseti.remoteSys.entities.Machine;
-import br.ind.rosseti.remoteSys.entities.User;
+import br.ind.rosseti.remoteSys.entities.DetailUser;
 
 
 
@@ -23,7 +23,7 @@ public class UserMachinePK  implements Serializable{
 	
 	@ManyToOne
 	@JoinColumn(name = "user_id")
-	private User user;
+	private DetailUser user;
 	
 	
 	public Machine getMachine() {
@@ -34,11 +34,11 @@ public class UserMachinePK  implements Serializable{
 		this.machine = machine;
 	}
 
-	public User getUser() {
+	public DetailUser getUser() {
 		return user;
 	}
 
-	public void setUser(User user) {
+	public void setUser(DetailUser user) {
 		this.user = user;
 	}
 

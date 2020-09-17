@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.ind.rosseti.remoteSys.entities.Machine;
-import br.ind.rosseti.remoteSys.entities.User;
+import br.ind.rosseti.remoteSys.entities.DetailUser;
 import br.ind.rosseti.remoteSys.entities.UserMachine;
 import br.ind.rosseti.remoteSys.services.UserMachineService;
-import br.ind.rosseti.remoteSys.services.UserService;
+import br.ind.rosseti.remoteSys.services.DetailUserService;
 
 
 @RestController
@@ -24,7 +24,7 @@ public class UserMachineResource {
 	private UserMachineService service;
 	
 	@Autowired
-	private UserService serviceUser;
+	private DetailUserService serviceUser;
 	
 	@GetMapping
 	public ResponseEntity<List<UserMachine>> findAll(){

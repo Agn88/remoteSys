@@ -9,27 +9,27 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.ind.rosseti.remoteSys.entities.User;
-import br.ind.rosseti.remoteSys.services.UserService;
+import br.ind.rosseti.remoteSys.entities.DetailUser;
+import br.ind.rosseti.remoteSys.services.DetailUserService;
 
 
 @RestController
 @RequestMapping(value = "/users")
-public class UserResource {
+public class DetailUserResource {
 	
 	@Autowired
-	private UserService service;
+	private DetailUserService service;
 	
 	@GetMapping
-	public ResponseEntity<List<User>> findAll(){
-		List<User> list = service.findAll();
+	public ResponseEntity<List<DetailUser>> findAll(){
+		List<DetailUser> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 	
 	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<User> bindById(@PathVariable Long id){
-		User obj = service.findById(id);
+	public ResponseEntity<DetailUser> bindById(@PathVariable Long id){
+		DetailUser obj = service.findById(id);
 		return ResponseEntity.ok(obj);
 	}
 	
