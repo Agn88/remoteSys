@@ -1,4 +1,4 @@
-package br.ind.rosseti.remoteSys.communication;
+package br.ind.rosseti.remoteSys.rascunhos;
 
 import java.util.Date;
 import java.util.TimerTask;

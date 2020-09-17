@@ -49,7 +49,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configureGlobal(AuthenticationManagerBuilder auth) 
 	  throws Exception {
 	    auth.jdbcAuthentication().dataSource(dataSource)
-	    .withUser("aga").password(passwordEncoder().encode("5544690")).roles("USER", "ADMIN");
+	    ;//.withUser("aga").password(passwordEncoder().encode("5544690")).roles("USER", "ADMIN");
 	    /*
 	      .withUser("user").password(passwordEncoder().encode("password")).roles("USER")
 	      .and()
