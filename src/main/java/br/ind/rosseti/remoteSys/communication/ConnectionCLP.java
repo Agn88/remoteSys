@@ -69,6 +69,7 @@ public class ConnectionCLP {
             }
            
     	}
+    	System.out.println("Error query executed: " + machine.getName() + " - " + machine.getIp());
     	return null;
     }
     

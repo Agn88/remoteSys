@@ -1,4 +1,4 @@
-package br.ind.rosseti.remoteSys.securingweb;
+package br.ind.rosseti.remoteSys.security;
 
 import javax.sql.DataSource;
 

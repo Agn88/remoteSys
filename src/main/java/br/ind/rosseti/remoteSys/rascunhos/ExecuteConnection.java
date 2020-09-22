@@ -1,21 +1,8 @@
 package br.ind.rosseti.remoteSys.rascunhos;
 
-import java.util.Date;
-import java.util.TimerTask;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.core.annotation.Order;
-import org.springframework.stereotype.Component;
-
-import br.ind.rosseti.remoteSys.entities.Machine;
-import br.ind.rosseti.remoteSys.entities.MachineDetail;
-import br.ind.rosseti.remoteSys.repositories.MachineDetailRepository;
-import br.ind.rosseti.remoteSys.repositories.MachineRepository;
-
-@Order(value = 2)
-@Component
-public class ExecuteConnection implements CommandLineRunner {
+//@Order(value = 2)
+//@Component
+public class ExecuteConnection /*implements CommandLineRunner*/ {
 
 	/*
 	@Autowired
@@ -25,7 +12,7 @@ public class ExecuteConnection implements CommandLineRunner {
 	private MachineDetailRepository machineDetailRepository;
 	*/
 
-
+	/*
 	@Override
 	public void run(String... arg0) throws Exception {
 	
@@ -64,7 +51,7 @@ public class ExecuteConnection implements CommandLineRunner {
 
 		//System.out.println("Order 2: Executed is sucess.");
 
-	}
+//	}
  
 	/*
 	public void updateValues() {
